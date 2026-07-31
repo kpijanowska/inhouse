@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-zinc-950 text-white">
       <div className="mx-auto flex max-w-7xl justify-between gap-12 px-8 py-10">
 
         <div>
@@ -26,11 +26,10 @@ export default function Footer() {
           <h3 className="mb-3 text-lg font-semibold">Nawigacja</h3>
 
           <div className="flex flex-col gap-2 text-gray-400">
-            <Link href="/">Strona główna</Link>
-            <Link href="/o-nas">O nas</Link>
-            <Link href="/oferta">Oferta</Link>
-            <Link href="/realizacje">Realizacje</Link>
-            <Link href="/kontakt">Kontakt</Link>
+            <Link href="/" className="transition-colors hover:text-amber-400">Strona główna</Link>
+            <Link href="/about-us" className="transition-colors hover:text-amber-400">O nas</Link>
+            <Link href="/realizations" className="transition-colors hover:text-amber-400">Realizacje</Link>
+            <Link href="/contact" className="transition-colors hover:text-amber-400">Kontakt</Link>
           </div>
         </div>
       </div>
