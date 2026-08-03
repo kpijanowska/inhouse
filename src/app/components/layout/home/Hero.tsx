@@ -35,7 +35,8 @@ export default function Hero() {
       pełne zadowolenie naszych klientów.
     </p>
   </div>
-</div>
+  </div>
+
     </section>
   );
 }
