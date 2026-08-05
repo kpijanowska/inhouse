@@ -1,3 +1,9 @@
+import Navbar from "../components/layout/Navbar";
+
 export default function AboutUs() {
-    return <h1>About Us Page</h1>
+    return (
+        <>
+        <Navbar variant="light"/>
+        </>
+    )
 }

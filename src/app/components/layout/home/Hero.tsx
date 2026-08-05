@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -18,13 +19,22 @@ export default function Hero() {
       Kompleksowe usługi budowlane
     </h1>
 
-    <div className="mt-8 flex gap-4">
-      <Button>Nasze realizacje</Button>
+   
+<div className="mt-10 flex gap-4">
+  <Link
+    href="/realizations"
+    className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-white hover:text-black"
+  >
+    Nasze realizacje
+  </Link>
 
-      <Button variant="outline">
-        Kontakt
-      </Button>
-    </div>
+  <Link
+    href="/contact"
+    className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-amber-600"
+  >
+    Kontakt
+  </Link>
+</div>
   </div>
 </div>
 <div className="absolute bottom-0 right-0 z-20 px-16 pb-12">
@@ -40,7 +50,3 @@ export default function Hero() {
     </section>
   );
 }
-
-//  Realizujemy kompleksowe remonty, wykończenia wnętrz oraz prace budowlane
-//       z dbałością o każdy detal. Stawiamy na terminowość, jakość wykonania i
-//       pełne zadowolenie naszych klientów.

@@ -1,21 +1,20 @@
-
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Image from "next/image";
 export default function FeaturedProjects() {
     const projects = [
         {
-            title: "Projekt 1",
-            description: "Opis projektu 1",
+            title: "Dom jednorodzinny",
+            description: "Kraków • 2025",
             imageUrl: "/images/feat1.jpg",
         },
         {
-            title: "Projekt 2", 
-            description: "Opis projektu 2",
+            title: "Dom wielorodzinny", 
+            description: "Warszawa • 2024",
             imageUrl: "/images/feat2.jpg",
         },
         {
-            title: "Projekt 3",
-            description: "Opis projektu 3",
+            title: "Dom deweloperski",
+            description: "Gdów • 2022",
             imageUrl: "/images/feat3.jpg",
         },
     ];
@@ -26,7 +25,7 @@ export default function FeaturedProjects() {
 
     <div className="mb-12 flex items-center justify-between">
       <div>
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-bold" >
           Nasze realizacje
         </h2>
 
@@ -36,9 +35,11 @@ export default function FeaturedProjects() {
         </p>
       </div>
 
-      <Button className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all hover:border-black hover:bg-black hover:text-white">
-        Zobacz wszystkie
-      </Button>
+      
+    <Link href="/realizations"className="inline-flex items-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all hover:border-black hover:bg-black hover:text-white">
+      Zobacz wszystkie
+    </Link>
+
     </div>
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (

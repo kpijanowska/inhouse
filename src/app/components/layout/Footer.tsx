@@ -1,41 +1,78 @@
 import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 text-white">
-      <div className="mx-auto flex max-w-7xl justify-between gap-12 px-8 py-10">
+    <footer className="border-t border-zinc-200 bg-white">
+      <div className="mx-auto max-w-7xl px-8 py-20">
 
-        <div>
-          <h2 className="mb-3 text-2xl font-bold">Inhouse Małopolska</h2>
-          <p className="max-w-xs text-gray-400">
-            Kompleksowe usługi budowlane i wykończeniowe na terenie Małopolski.
+        <div className="flex flex-col justify-between gap-16 lg:flex-row">
+
+          {/* Lewa strona */}
+          <div>
+            <h2 className="text-3xl font-bold text-zinc-900">
+              Inhouse Małopolska
+            </h2>
+
+            <p className="mt-4 max-w-sm text-zinc-500">
+              Budujemy z dbałością o każdy detal.
+            </p>
+          </div>
+
+          {/* Prawa strona */}
+          <div>
+            <h3 className="mb-6 text-lg font-semibold text-zinc-900">
+              Kontakt
+            </h3>
+
+            <div className="space-y-5">
+
+              <div className="flex items-center gap-4 text-zinc-600">
+                <Phone className="h-5 w-5 text-amber-500" />
+                <span>+48 123 456 789</span>
+              </div>
+
+              <div className="flex items-center gap-4 text-zinc-600">
+                <Mail className="h-5 w-5 text-amber-500" />
+                <span>kontakt@inhouse.pl</span>
+              </div>
+
+              <div className="flex items-center gap-4 text-zinc-600">
+                <MapPin className="h-5 w-5 text-amber-500" />
+                <span>Kraków, Małopolska</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-zinc-200 pt-8 text-sm text-zinc-500 lg:flex-row">
+
+          <p>
+            © {new Date().getFullYear()} Inhouse Małopolska
           </p>
+
+          <nav className="flex gap-8">
+            <Link href="/" className="transition hover:text-amber-500">
+              Strona główna
+            </Link>
+
+            <Link href="/about-us" className="transition hover:text-amber-500">
+              O nas
+            </Link>
+
+            <Link href="/realizations" className="transition hover:text-amber-500">
+              Realizacje
+            </Link>
+
+            <Link href="/contact" className="transition hover:text-amber-500">
+              Kontakt
+            </Link>
+          </nav>
+
         </div>
 
-        <div>
-          <h3 className="mb-3 text-lg font-semibold">Kontakt</h3>
-
-          <div className="space-y-2 text-gray-400">
-            <p>📍 ul. Przykładowa 1, 30-001 Kraków</p>
-            <p>📞 +48 123 456 789</p>
-            <p>✉️ kontakt@inhouse.pl</p>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="mb-3 text-lg font-semibold">Nawigacja</h3>
-
-          <div className="flex flex-col gap-2 text-gray-400">
-            <Link href="/" className="transition-colors hover:text-amber-400">Strona główna</Link>
-            <Link href="/about-us" className="transition-colors hover:text-amber-400">O nas</Link>
-            <Link href="/realizations" className="transition-colors hover:text-amber-400">Realizacje</Link>
-            <Link href="/contact" className="transition-colors hover:text-amber-400">Kontakt</Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-700 py-5 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Inhouse Małopolska. Wszelkie prawa zastrzeżone.
       </div>
     </footer>
   );
