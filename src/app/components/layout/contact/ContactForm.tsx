@@ -1,69 +1,93 @@
 export default function ContactForm() {
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
-      <h2 className="text-3xl font-bold text-zinc-900">
-        Napisz do nas
-      </h2>
+    <form className="mt-12 space-y-8">
 
-      <p className="mt-3 text-zinc-600">
-        Wypełnij formularz, a skontaktujemy się z Tobą najszybciej jak to możliwe.
-      </p>
+      <div className="grid gap-6 md:grid-cols-2">
 
-      <form className="mt-8 space-y-6">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div>
-            <label
-              htmlFor="name"
-              className="mb-2 block text-sm font-medium text-zinc-700"
-            >
-              Imię i nazwisko
-            </label>
+        <div>
+          <label
+            htmlFor="firstName"
+            className="mb-3 block text-sm font-medium text-zinc-700"
+          >
+            Imię
+          </label>
 
-            <input
-              id="name"
-              type="text"
-              className="w-full rounded-lg border border-zinc-300 px-4 py-3 focus:border-amber-500 focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="mb-2 block text-sm font-medium text-zinc-700"
-            >
-              Email
-            </label>
-
-            <input
-              id="email"
-              type="email"
-              className="w-full rounded-lg border border-zinc-300 px-4 py-3 focus:border-amber-500 focus:outline-none"
-            />
-          </div>
+          <input
+            id="firstName"
+            type="text"
+            className="w-full rounded-xl border border-zinc-200 px-5 py-4 outline-none transition focus:border-lime-700"
+          />
         </div>
 
         <div>
           <label
-            htmlFor="message"
-            className="mb-2 block text-sm font-medium text-zinc-700"
+            htmlFor="lastName"
+            className="mb-3 block text-sm font-medium text-zinc-700"
           >
-            Wiadomość
+            Nazwisko
           </label>
 
-          <textarea
-            id="message"
-            rows={6}
-            className="w-full rounded-lg border border-zinc-300 px-4 py-3 focus:border-amber-500 focus:outline-none"
+          <input
+            id="lastName"
+            type="text"
+            className="w-full rounded-xl border border-zinc-200 px-5 py-4 outline-none transition focus:border-lime-700"
           />
         </div>
 
-        <button
-          type="submit"
-          className="rounded-full bg-zinc-900 px-8 py-4 text-white transition hover:bg-zinc-800"
+        <div>
+          <label
+            htmlFor="email"
+            className="mb-3 block text-sm font-medium text-zinc-700"
+          >
+            Email
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            className="w-full rounded-xl border border-zinc-200 px-5 py-4 outline-none transition focus:border-lime-700"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="phone"
+            className="mb-3 block text-sm font-medium text-zinc-700"
+          >
+            Telefon
+          </label>
+
+          <input
+            id="phone"
+            type="tel"
+            className="w-full rounded-xl border border-zinc-200 px-5 py-4 outline-none transition focus:border-lime-700"
+          />
+        </div>
+
+      </div>
+
+      <div>
+        <label
+          htmlFor="message"
+          className="mb-3 block text-sm font-medium text-zinc-700"
         >
-          Wyślij wiadomość
-        </button>
-      </form>
-    </div>
+          Wiadomość
+        </label>
+
+        <textarea
+          id="message"
+          rows={7}
+          className="w-full rounded-xl border border-zinc-200 px-5 py-4 outline-none transition focus:border-lime-700"
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="rounded-full bg-lime-700 px-8 py-4 font-medium text-white transition hover:bg-lime-800"
+      >
+        Wyślij wiadomość
+      </button>
+
+    </form>
   );
 }

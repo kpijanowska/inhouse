@@ -9,7 +9,7 @@ export default function Contact() {
         <Navbar variant="light"/>
         <ContactHero/>
         <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-16 px-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-36 px-8 lg:grid-cols-2">
             <ContactInfo />
             <ContactForm />
          </div>

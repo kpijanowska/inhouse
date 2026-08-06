@@ -3,7 +3,7 @@ export default function ContactHero() {
     <section className="bg-gray-100 pt-40 pb-24">
   <div className="mx-auto max-w-4xl px-8 text-center">
 
-    <p className="text-sm font-semibold uppercase tracking-[0.4em] text-amber-500">
+    <p className="text-sm font-semibold uppercase tracking-[0.4em] text-lime-700">
       Kontakt
     </p>
 

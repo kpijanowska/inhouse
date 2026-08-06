@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
         key={feature.title}
         className="flex flex-col items-center rounded-xl bg-white p-8 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       >
-        <Icon className="mb-6 h-12 w-12 text-amber-500" />
+        <Icon className="mb-6 h-12 w-12 text-lime-700" strokeWidth={1.25} />
 
         <h3 className="text-2xl font-semibold">
           {feature.title}

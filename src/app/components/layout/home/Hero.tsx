@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,7 +30,7 @@ export default function Hero() {
 
   <Link
     href="/contact"
-    className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-amber-600"
+    className="inline-flex items-center justify-center rounded-full bg-lime-700 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-lime-800"
   >
     Kontakt
   </Link>
