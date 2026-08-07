@@ -1,6 +1,6 @@
 export default function RealizationsHeader() {
   return (
-    <section className="bg-white pt-30 pb-24">
+    <section className="bg-gray-100 pt-30 pb-24">
       <div className="mx-auto max-w-4xl px-8 text-center">
 
         <p className="text-sm font-semibold uppercase tracking-[0.4em] text-lime-700">

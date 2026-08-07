@@ -50,7 +50,7 @@ export default function RealizationsGrid() {
 ];
 
 return (
-    <section className="pb-24">
+    <section className="pb-24 bg-gray-100">
   <div className="mx-auto max-w-7xl px-8">
 
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

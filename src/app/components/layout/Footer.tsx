@@ -11,6 +11,7 @@ export default function Footer() {
 
           {/* Lewa strona */}
           <div>
+            <Link href="/">
             <Image
               src="/images/Logo_inHouse.png"
               alt="Inhouse Małopolska"
@@ -18,6 +19,7 @@ export default function Footer() {
               height={80}
               className="-mt-6 h-24 w-auto"
             />
+            </Link>
 
             <p className="mt-4 max-w-sm text-zinc-500 pl-4">
               Budujemy z dbałością o każdy detal.

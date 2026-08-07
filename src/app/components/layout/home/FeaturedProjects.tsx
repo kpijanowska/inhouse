@@ -20,52 +20,61 @@ export default function FeaturedProjects() {
     ];
 
     return (
-        <section className="bg-gray-100 py-12">
+        <section className="bg-gray-100 py-20">
   <div className="mx-auto max-w-7xl px-8">
 
-    <div className="mb-12 flex items-center justify-between">
-      <div>
-        <h2 className="text-4xl font-bold" >
-          Nasze realizacje
-        </h2>
+    <div className="mx-auto mb-14 max-w-2xl text-center">
+      <h2 className="text-4xl font-bold">
+        Nasze realizacje
+      </h2>
 
-        <p className="mt-4 max-w-2xl text-gray-600">
-          Zobacz wybrane realizacje, które najlepiej pokazują jakość
-          naszej pracy oraz dbałość o każdy detal.
-        </p>
-      </div>
-
-      
-    <Link href="/realizations"className="inline-flex items-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all hover:border-black hover:bg-black hover:text-white">
-      Zobacz wszystkie
-    </Link>
-
+      <p className="mt-5 text-lg text-zinc-600">
+        Zobacz wybrane realizacje, które najlepiej pokazują jakość naszej pracy
+        oraz dbałość o każdy detal.
+      </p>
     </div>
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-                <div
-                    key={project.title}
-                    className="overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                >   
-                    <Image
-                        src={project.imageUrl}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="h-64
-        w-full
-        object-cover
-        transition-transform
-        duration-500
-        hover:scale-105"
-                    />
-                    <div className="p-6">
-                        <h3 className="text-2xl font-semibold">{project.title}</h3>
-                        <p className="mt-3 text-gray-600">{project.description}</p>
-                    </div>
-                </div>
-            ))}
+
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <div
+          key={project.title}
+          className="group overflow-hidden rounded-2xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div className="overflow-hidden">
+            <Image
+              src={project.imageUrl}
+              alt={project.title}
+              width={600}
+              height={400}
+              className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <div className="p-6">
+            <h3 className="text-2xl font-semibold">
+              {project.title}
+            </h3>
+
+            <p className="mt-2 text-zinc-500">
+              {project.description}
+            </p>
+          </div>
         </div>
-        </div>
-    </section>
+      ))}
+    </div>
+
+    <div className="mt-14 text-center">
+  <Link
+    href="/realizations"
+    className="inline-flex items-center rounded-full border border-black px-8 py-4 text-base font-medium text-black transition-all hover:bg-black hover:text-white"
+  >
+    Zobacz wszystkie
+  </Link>
+</div>
+
+  </div>
+</section>
     )};
+
+
+    
